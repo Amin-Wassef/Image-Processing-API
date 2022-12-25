@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.use([validName, validDimension]);
 
-router.get('/', async (req, res) => {
+router.get('/', async (req: Request, res: Response): Promise<void> => {
   const name = req.query.name as string;
   const width = parseInt(req.query.width as string);
   const height = parseInt(req.query.height as string);

@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import router from './routes/api';
 
 // Start up an instance of app
@@ -12,7 +12,7 @@ app.listen(port, () => {
 });
 
 // Main route
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response): void => {
   res.send('Server is built successfully');
 });
 

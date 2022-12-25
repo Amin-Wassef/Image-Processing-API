@@ -67,11 +67,19 @@ Step Five:
 - Making some code testing using Jasmine to test that the code is running properly.
     - Test endpoint responses at http://localhost:8000
         - Test if main route is working
+            http://localhost:8000
         - Test /api without query parameters
+            http://localhost:8000/api
         - Test /api with query: name: invalid
+            http://localhost:8000/api?name=invd
         - Test /api with query: name: valid
+            http://localhost:8000/api?name=fjord
         - Test /api with query: name: valid, width / height: valid only
+            http://localhost:8000/api?name=fjord&width=2358
         - Test /api with query: name: valid, width: valid and height: valid
+            http://localhost:8000/api?name=fjord&width=2358&height=4896
         - Test /api with query: name: valid, width: valid and height: invalid
+            http://localhost:8000/api?name=fjord&width=2358&height=-4896
         - Test /api with query: name: valid, width: invalid and height: valid
+            http://localhost:8000/api?name=fjord&width=bjh&height=4896
     - Resize function testing
