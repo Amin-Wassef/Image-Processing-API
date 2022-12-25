@@ -25,7 +25,13 @@ As the project is build using typescript and server side node js then compiled t
 Step Two:
 
 - Running node to my app throught npm init and making config. also package.json file apears.
-- Creating proper scripts needed in the package.json file.
+- Creating proper scripts needed in the package.json file:
+    - "lint": "eslint . --ext. ts",
+    - "prettier": "prettier --config .prettierrc {,!(node_modules)/**/}*.ts --write",
+    - "build": "npx tsc",
+    - "jasmine": "jasmine",
+    - "test": "npm run build && npm run jasmine",
+    - "start": "nodemon src/index.ts"
 - Creating tsconfig.json file for typescript config. using npx tsc --init 
 - Installing needed dependencies and dev_dependencies and type definitions (as indicated in package.json file) from:
     - npm i dependancy name (in dependencies)
@@ -58,3 +64,13 @@ Step Four:
 Step Five:
 
 - Making some code testing using Jasmine to test that the code is running properly.
+    - Test endpoint responses at http://localhost:8000
+        - Test if main route is working
+        - Test /api without query parameters
+        - Test /api with query: name: invalid
+        - Test /api with query: name: valid
+        - Test /api with query: name: valid, width / height: valid only
+        - Test /api with query: name: valid, width: valid and height: valid
+        - Test /api with query: name: valid, width: valid and height: invalid
+        - Test /api with query: name: valid, width: invalid and height: valid
+    - Resize function testing
