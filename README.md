@@ -13,6 +13,7 @@ As the project is build using typescript and server side node js then compiled t
         - resize.ts for resinzing function.
     - Creating tests folder conatining:
         - indexSpec.ts file for testing index.ts codes.
+        - utiles folder containing resizeSpec.ts for testing the sharp resizing function.
         - helpers folder containing reportes.ts file with its congigurations.
 
 - Creating spec folder containing support folder containing jasmine.jason file for directin jasmine to folders and files for testing.
